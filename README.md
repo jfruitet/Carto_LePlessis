@@ -30,6 +30,6 @@ GeoJSON https://geojson.io/
 JSON Editor OnLine https://jsoneditoronline.org/
 
 ## License
-**MIT** *Free Software, Hell Yeah!* https://github.com/pandao/editor.md/blob/master/LICENSE
+Pour le code source : **MIT** *Free Software, Hell Yeah!* https://github.com/pandao/editor.md/blob/master/LICENSE
 
-**Creative Commons** http://creativecommons.org/licenses/by-sa/4.0/
+Pour les documents : **Creative Commons** http://creativecommons.org/licenses/by-sa/4.0/
