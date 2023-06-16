@@ -24,7 +24,9 @@ J'ai fini par modifier à la main les propriétes des markers et de la zone de n
 
 ## Liens
 MIT App Inventor http://ai2.appinventor.mit.edu/
+
 GeoJSON https://geojson.io/
+
 JSON Editor OnLine https://jsoneditoronline.org/
 
 ## License
