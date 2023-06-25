@@ -5,19 +5,34 @@ Positionnement de bouées de régate radiocommandées sur l'étang du Plessis (4
 
 ### Développée par JF sous MIT App Inventor.
 (cc) jean.fruitet@free.fr
-Cette applet affiche la carte de l'étang du Plessis à Sainte Luce / Loire.
+Cette applet affiche la carte OpenStreetMap de l'étang du Plessis à Sainte Luce / Loire, 44980.
 
 ### Fonctionnalités
-- Placement des bouées fixes.
-- Tracé de la zone de navigation.
-- Saisie de la direction du vent  TWD en °
-- Saisie de la vitesse du vent : TWS en km/h
-- Saisie d'un parcours en mode texte et enregistrement dans une base de données locale TinyDB
+- Cartographie de l'étang du Plessis réservé au modélisme. Les bouées fixes ne peuvent être déplacées dans cette interface. Les bouées mobiles seront gérées dans la prochaine version de l'application.
+- Menu du bas de page :
+  1. Saisie de la direction d'où soufle le vent : entrer la valeus TWD en degrés ;
+  2. Saisie et vitesse du vent : entrer la valeur TWS en km/h ;
+- Menu droite
+  1. Aide, ouvre un écran sur cette page
+  2. Affiche une flèche opposée à la direction du vent, la direction d'ou soufle le vent (TWD : true wind direction) en  ° et la force du vent (TWS : true wind speed) en km/h ;
+  3. Bouton "BF" : affiche les bouées fixes ;
+  4. Bouton "ZN" : affiche la zone de navigation réservée à l'Association Radiomodéliste des Bords de Loire ;
+  5. Bouton "AP" : affiche le parcours ; la ligne de départ est en bleu, la ligne d'arrivée en magenta. Les portes sont franchies en leur milieu
+  6. Bouton "NP" : créer / modifier le parcours 
+- Menu "AP" : Affiche le parcours, le nom et le nombre de tours du parcours. Sauvegarde du parcours dans un fichier geoJSON (non implanté)
+- Menu "NP" : Créer / Modifier parcours :
+  1. La saisie des bouées dans l'ordre se fait en cochant le mode de franchissement (bâbord / tribord), le type de bouée (Départ, Arrivée, Porte, Autre) puis en cliquant sur la carte à la position de la bouée à intégrer dans le parcours.
+  2. Le bouton "Importer" récupère un fichier geoJSON du parcours (non implanté)
+  3. Le bouton "Retirer" ouvre une liste de sélection pour désigner une bouée à retirer du parcours ;
+  4. Le bouton "Vider" vide le parcours de son contenu ;
+  5. Le bouton "Enregistrer" sauvegarde le parcours courant dans un stockage TinyDB
 
-### Ce qui reste à faire
-Saisie le parcours en cliquant des bouées à l'écran. Cela permettra de récupérer les positions géographique pour tracer le parcours...
+## Ce qui reste à faire
+- Afficher le franchissement (bâbord / tribord) avec des marqueurs rouge ou vert.
+- Importer le parcours en geoJSON...
+- Exporter le parcours en geoJSON...
 
-### Difficultés rencontrées
+## Difficultés rencontrées
 Initialement la liste des bouées (markers) devait être lue dans un fichier geoJSON, ainsi que le polygone définissant la zone de navigation.
 Si les positions sont chargées, pour des raisons inconnues les propriétés de type des markers ne s'affichent pas dans l'applet MIT App Inventor et le fichier geojson des limites de navigation provoque une erreur.
 J'ai fini par modifier à la main les propriétes des markers et de la zone de navigation... Pénible.
