@@ -1,5 +1,5 @@
 # Carto_LePlessis
-Positionnement de bouées de régate radiocommandées sur l'étang du Plessis (44980)
+Positionnement de bouées de régate radiocommandée sur l'étang du Plessis (44980)
 
 **Applet** *Carto_LePlessis.apk* 
 
@@ -10,17 +10,19 @@ Cette applet affiche la carte OpenStreetMap de l'étang du Plessis à Sainte Luc
 ### Fonctionnalités
 - Cartographie de l'étang du Plessis réservé au modélisme. Les bouées fixes ne peuvent être déplacées dans cette interface. Les bouées mobiles seront gérées dans la prochaine version de l'application.
 - Menu du bas de page :
-  1. Saisie de la direction d'où soufle le vent : entrer la valeus TWD en degrés ;
+  1. Saisie de la direction d'où soufle le vent : entrer la valeur TWD en degrés ;
   2. Saisie et vitesse du vent : entrer la valeur TWS en km/h ;
 - Menu droite
-  1. Aide, ouvre un écran sur cette page
-  2. Affiche une flèche opposée à la direction du vent, la direction d'ou soufle le vent (TWD : true wind direction) en  ° et la force du vent (TWS : true wind speed) en km/h ;
-  3. Bouton "BF" : affiche les bouées fixes ;
-  4. Bouton "ZN" : affiche la zone de navigation réservée à l'Association Radiomodéliste des Bords de Loire ;
-  5. Bouton "AP" : affiche le parcours ; la ligne de départ est en bleu, la ligne d'arrivée en magenta. Les portes sont franchies en leur milieu
-  6. Bouton "NP" : créer / modifier le parcours 
-- Menu "AP" : Affiche le parcours, le nom et le nombre de tours du parcours. Sauvegarde du parcours dans un fichier geoJSON (non implanté)
-- Menu "NP" : Créer / Modifier parcours :
+  1. "?" : Aide, ouvre un écran sur cette page ci ;
+  2. Affiche une flèche opposée à la direction d'où soufle le vent, TWD : true wind direction en  ° et la force du vent TWS : true wind speed en km/h ;
+  3. Bouton "BF" : affiche / masque les bouées fixes ;
+  4. Bouton "ZN" : affiche / masque la zone de navigation réservée à l'Association Radiomodéliste des Bords de Loire ;
+  5. Bouton "AP" : affiche / masque le parcours ; la ligne de départ est en bleu, la ligne d'arrivée en magenta. Les portes sont franchies en leur milieu
+  6. Bouton "NP" : Affiche / masque le formulaire de création / modification du parcours courant
+- Menu "AP" :
+  1. Affiche le parcours, le nom et le nombre de tours du parcours. 
+  2. Sauvegarde du parcours dans un fichier geoJSON (non implanté)
+- Menu "NP" : Créer / Modifier le parcours courant :
   1. La saisie des bouées dans l'ordre se fait en cochant le mode de franchissement (bâbord / tribord), le type de bouée (Départ, Arrivée, Porte, Autre) puis en cliquant sur la carte à la position de la bouée à intégrer dans le parcours.
   2. Le bouton "Importer" récupère un fichier geoJSON du parcours (non implanté)
   3. Le bouton "Retirer" ouvre une liste de sélection pour désigner une bouée à retirer du parcours ;
