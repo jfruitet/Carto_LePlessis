@@ -1,38 +1,67 @@
 # Carto_LePlessis
-Positionnement de bouées de régate radiocommandée sur l'étang du Plessis (44980)
-
-**Applet** *Carto_LePlessis.apk* 
+Positionnement de bouées de régate radiocommandée
+**Applet** *CartoLePlessis.apk* 
 
 ### Développée par JF sous MIT App Inventor.
 (cc) jean.fruitet@free.fr
 Cette applet affiche la carte OpenStreetMap de l'étang du Plessis à Sainte Luce / Loire, 44980.
+Elle est surtout destinée à tester mes capacités à écrire une applet de géolocalisation et de gestion graphique de positions GPS.
+Elle entrera comme composant logiciel  dans le projet RoBoNav mené depuis février 2023 avec l'ICAM de Nantes.
 
 ### Fonctionnalités
-- Cartographie de l'étang du Plessis réservé au modélisme. Les bouées fixes ne peuvent être déplacées dans cette interface. Les bouées mobiles seront gérées dans la prochaine version de l'application.
+
+Cartographie de l'étang du Plessis réservé au modélisme. Les bouées fixes ne peuvent être déplacées dans cette interface. Les bouées mobiles seront gérées dans la prochaine version de l'application.
+
 - Menu du bas de page :
   1. Saisie de la direction d'où soufle le vent : entrer la valeur TWD en degrés ;
   2. Saisie et vitesse du vent : entrer la valeur TWS en km/h ;
 - Menu droite
   1. "?" : Aide, ouvre un écran sur cette page ci ;
   2. Affiche une flèche opposée à la direction d'où soufle le vent, TWD : true wind direction en  ° et la force du vent TWS : true wind speed en km/h ;
-  3. Bouton "BF" : affiche / masque les bouées fixes ;
+  3. Bouton "BF" : affiche / masque les bouées fixes dans leur couleur d'origine ;
   4. Bouton "ZN" : affiche / masque la zone de navigation réservée à l'Association Radiomodéliste des Bords de Loire ;
-  5. Bouton "AP" : affiche / masque le parcours ; la ligne de départ est en bleu, la ligne d'arrivée en magenta. Les portes sont franchies en leur milieu
+  5. Bouton "AP" : affiche / masque le parcours
   6. Bouton "NP" : Affiche / masque le formulaire de création / modification du parcours courant
-- Menu "AP" :
-  1. Affiche le parcours, le nom et le nombre de tours du parcours. 
+
+#### Affichage du parcours  
+La ligne de départ est en bleu, la ligne d'arrivée en magenta. Quand le départ et l'arrivée sont identiques c'est la couleur magenta qui s'impose ;
+
+Les portes sont franchies en leur milieu ;
+
+La couleur des bouées est adaptée au franchissement :
+- Bouées verte : la bouée est laissée à tribord
+- Bouée rouge : la bouée est laissée à bâbord
+    
+#### Formulaires  de saisie et d'affichage du parcours courant
+
+- Menu "AP" : "Parcours"
+  1. Nom du parcours 
   2. Sauvegarde du parcours dans un fichier geoJSON (non implanté)
-- Menu "NP" : Créer / Modifier le parcours courant :
-  1. La saisie des bouées dans l'ordre se fait en cochant le mode de franchissement (bâbord / tribord), le type de bouée (Départ, Arrivée, Porte, Autre) puis en cliquant sur la carte à la position de la bouée à intégrer dans le parcours.
+  3. Liste des bouées du parcours au format texte avec séparateur ","
+  
+Pour chaque bouée sont affiché le Nom, le Franchissement et le Type 
+<Nom bouée> B/T D/A/G/<espace blanc>
+
+- Menu "NP" : "Créer / Modifier un parcours"
+   
+C'est le parcours courant qui est modifié.
+
+La saisie des bouées doit être faite dans l'ordre du parcours en cochant d'abord  le mode de franchissement (bâbord / tribord), le type de bouée (Départ, Arrivée, Porte, Autre) puis en cliquant sur la carte à la position de la bouée à intégrer dans le parcours.
+
+  1.  Parcours saisi en italique : liste de bouées sous forme de chaînes de caractères avec séparateur ",". 
+Chaque bouée est affichée dans le format  
+      <code>BOUEE;B|T;D|A|G|<SPACE>;Latitude;Longitude</code>
+      
   2. Le bouton "Importer" récupère un fichier geoJSON du parcours (non implanté)
-  3. Le bouton "Retirer" ouvre une liste de sélection pour désigner une bouée à retirer du parcours ;
-  4. Le bouton "Vider" vide le parcours de son contenu ;
-  5. Le bouton "Enregistrer" sauvegarde le parcours courant dans un stockage TinyDB
+  3. Le bouton "Retirer" ouvre un écran de sélection pour désigner une bouée à retirer du parcours ;
+  5. Le bouton "Vider" vide le parcours de son contenu ;
+  6. Le bouton "Enregistrer" sauvegarde le parcours courant dans un stockage TinyDB persistant.
 
 ## Ce qui reste à faire
-- Afficher le franchissement (bâbord / tribord) avec des marqueurs rouge ou vert.
-- Importer le parcours en geoJSON...
-- Exporter le parcours en geoJSON...
+- Importer un parcours au format geoJSON...
+- Exporter le parcours courant au format geoJSON...
+- Ouvrir l'application à d'autres plans d'eau.
+- Intégrer l'application au projet RoBoNav de positionnement de bouées de régate avec ancrage virtuel par GPS
 
 ## Difficultés rencontrées
 Initialement la liste des bouées (markers) devait être lue dans un fichier geoJSON, ainsi que le polygone définissant la zone de navigation.
