@@ -8,6 +8,9 @@ Cette applet affiche la carte OpenStreetMap de l'étang du Plessis à Sainte Luc
 Elle est surtout destinée à tester mes capacités à écrire une applet de géolocalisation et de gestion graphique de positions GPS.
 Elle entrera comme composant logiciel  dans le projet RoBoNav mené depuis février 2023 avec l'ICAM de Nantes.
 
+## Ecran 1
+Affichage de la carte du plan d'eau du Plessis avec les bouées fixes.
+
 ### Fonctionnalités
 
 Cartographie de l'étang du Plessis réservé au modélisme. Les bouées fixes ne peuvent être déplacées dans cette interface. Les bouées mobiles seront gérées dans la prochaine version de l'application.
@@ -56,6 +59,19 @@ Chaque bouée est affichée dans le format
   3. Le bouton "Retirer" ouvre un écran de sélection pour désigner une bouée à retirer du parcours ;
   5. Le bouton "Vider" vide le parcours de son contenu ;
   6. Le bouton "Enregistrer" sauvegarde le parcours courant dans un stockage TinyDB persistant.
+
+## Ecran 2
+Accès aux données stockées et aux fichiers de parcours sauvegardés.
+- Menu "Fichiers"
+  1. Affichage réscursif des fichiers et des dossiers de l'espace de stockage attribué à l'application
+  2. Supprimer un fichier
+  3. Afficher le contenu d'un fichier
+- Menu "Paramètres"
+  1. Données chargées en mémoire pérennes : TWD / TWS / Nom du parcours et Parcours en mémoire
+- Menu "A propos"
+  1. Page GitHub de l'appli.
+- Menu "Retour"
+  1. Renvoi à l'écran n°1
 
 ## Ce qui reste à faire
 - Importer un parcours au format geoJSON...
