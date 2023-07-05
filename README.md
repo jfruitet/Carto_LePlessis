@@ -81,6 +81,16 @@ Ceci afin de proposer des traitements de type optimisation de parcours, etc.
 - Menu "Retour"
   1. Retour à l'écran n°1
 
+## Connexion avec un serveur externe
+
+L'applet Carto_LePlessis peut envoyer à un serveur externe le parcours courant, la zone de navigation et la liste des bouées fixes,
+afin d'appliquer des calculs d'optimisation de positionnement des bouées mobiles.
+Il y a quelques conditions à cela :
+  1. La connexion Web doit être activée (ou les Données mobiles activées)
+  2. Un serveur doit être activé.
+  3. Dans la version actuelle l'URL du serveur est codée en dur dans le code source de l'applet MIT AI2 "*Carto_LePlessis*".
+  4. Le dossier "sources_serveur.zip" contient les fichiers sources afin d'installer un serveur de test sur un site HTTPD local de type Wamp ou Xamp. Ces sources doivent être placées dans le dossier ./cartoleplessis du dossier htdocs de ce serveur...
+
 ## Ce qui reste à faire
 - Importer un plan d'eau différent et les bouées fixes de celui-ci au format geoJSON...
 - Intégrer l'application au projet RoBoNav de positionnement de bouées de régate avec ancrage virtuel par GPS
@@ -92,7 +102,7 @@ J'ai fini par modifier à la main les propriétes des markers et de la zone de n
 
 J'ai aussi eu pas mal de difficulté à appeler un serveur externe en PHP mais ce n'est pas dû à MIT AI2.
 
-Enfin je pense être allé au maximum de ce qu'il est raisonable deprogrammer avec MIT AI2 car plus le programme enfle plus il est difficile de s'y retrouver.
+Enfin je pense être allé au maximum de ce qu'il est raisonable de programmer avec MIT AI2 car plus le programme enfle plus il est difficile de s'y retrouver.
 
 Je regrette que AI2 ne bénéficie pas d'un mécanisme de fichiers inclus qui permettrait d'alléger le code du programme principal.
 
